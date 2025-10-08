@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 import os
 
 from db.base import Base
-from db.models.all import User, Survey, SurveyQuestion, SurveyResponse, SurveyAnswer
+from db.models.all import Temp
 
 import sys
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))

@@ -1,8 +1,6 @@
 from fastapi import FastAPI
 from core.config import settings
 
-from api.user import router as user_router
-
 
 app = FastAPI(
     title=settings.APP_NAME,
@@ -10,8 +8,6 @@ app = FastAPI(
     description="FastAPI backend application",
     debug=settings.DEBUG
 )
-
-app.include_router(user_router, prefix="/users", tags=["Users"])
 
 @app.get("/")
 def read_root():
